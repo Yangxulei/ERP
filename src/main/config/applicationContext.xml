@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc-4.3.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
+		
+	<!-- DAO层自动扫描功能 -->	
+	<context:component-scan base-package="com.iss.db"/>
+	
+	<!-- 数据源，相当于Connection -->
+	<bean id="dataSource" class="org.springframework.jdbc.datasource.SimpleDriverDataSource">
+		<property name="driverClass" value="com.mysql.jdbc.Driver"></property>
+		<property name="url" value="jdbc:mysql://127.0.0.1:3306/isshrpooling?userSSL=true"></property>
+		<property name="username" value="root"></property>
+		<property name="password" value="123456"></property>
+	</bean>
+	
+	<!-- 相当于JDBC基础程序，Hibernate的核心 -->
+	<bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="dataSource" ref="dataSource"></property>
+		<property name="mappingLocations" value="classpath:com/iss/db/bean/*.hbm.xml" ></property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</prop>
+				<prop key="hibernate.show_sql">true</prop>
+			</props>
+		</property>
+	</bean>
+	
+	<!-- HibernateTemplate，封装好的Hibernate调用程序，主要应用对象 -->
+	<bean id="htemplate" class="org.springframework.orm.hibernate4.HibernateTemplate">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	<bean id="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+	    <property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	
+  <tx:advice id="txAdvice" transaction-manager="transactionManager">
+	<tx:attributes>
+	    <tx:method name="add*" propagation="REQUIRED"/>
+	    <tx:method name="del*" propagation="REQUIRED"/>
+	    <tx:method name="save*" propagation="REQUIRED"/>
+	    <tx:method name="update*" propagation="REQUIRED"/>
+	    
+	    <tx:method name="get*" propagation="SUPPORTS"/>
+	    <tx:method name="find*" propagation="SUPPORTS"/>
+	    <tx:method name="search*" propagation="SUPPORTS"/>
+	    <tx:method name="load*" propagation="SUPPORTS"/>
+	    
+	    <tx:method name="*" read-only="true"/>
+	</tx:attributes>
+</tx:advice>
+
+   <aop:config expose-proxy="true" >
+        <aop:pointcut expression="execution(* com.iss.service..*.*(..))" id="service"/>
+        <aop:advisor advice-ref="txAdvice" pointcut-ref="service"></aop:advisor>
+   </aop:config>	
+   
+</beans>

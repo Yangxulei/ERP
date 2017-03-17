@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-3-8 16:55:02 by Hibernate Tools 4.3.5.Final -->
+<hibernate-mapping>
+    <class name="com.iss.db.bean.Deptview" table="deptview" catalog="isshrpooling" optimistic-lock="version">
+        <composite-id name="id" class="com.iss.db.bean.DeptviewId">
+            <key-property name="id" type="int">
+                <column name="id" />
+            </key-property>
+            <key-property name="deptName" type="string">
+                <column name="deptName" length="45" />
+            </key-property>
+            <key-property name="parentId" type="java.lang.Integer">
+                <column name="parentId" />
+            </key-property>
+            <key-property name="deptParent" type="string">
+                <column name="deptParent" length="45" />
+            </key-property>
+            <key-property name="desc" type="string">
+                <column name="desc" />
+            </key-property>
+            <key-property name="enable" type="java.lang.Byte">
+                <column name="enable" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

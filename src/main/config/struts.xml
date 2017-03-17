@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+
+        <constant name="struts.objectFactory" value="spring"></constant>
+        
+        <include file="struts-ji.xml"></include>
+        <include file="struts-sun.xml"></include>
+        <include file="struts-wei.xml"></include>
+        <include file="struts-gao.xml"></include>
+
+	<package name="SysUser" namespace="/SysUser" extends="json-default">
+		<action name="userLogin-ji" class="com.iss.action.JiUserAction"
+			method="login">
+			<result name="success" type="redirect">/index-ji.jsp</result>
+			<result name="error" type="dispatcher">/login-ji.jsp</result>
+		</action>
+
+		<action name="userLogin-sun" class="com.iss.action.SunUserAction"
+			method="login">
+			<result name="success" type="redirect">/index-sun.jsp</result>
+			<result name="error" type="dispatcher">/login-sun.jsp</result>
+		</action>
+
+		<action name="userLogin-wei" class="com.iss.action.WeiUserAction"
+			method="login">
+			<result name="success" type="redirect">/index-wei.jsp</result>
+			<result name="error" type="dispatcher">/login-wei.jsp</result>
+		</action>
+
+		<action name="userLogin-gao" class="com.iss.action.GaoUserAction"
+			method="login">
+			<result name="success" type="redirect">/index-gao.jsp</result>
+			<result name="error" type="dispatcher">/login-gao.jsp</result>
+		</action>
+	</package>
+
+</struts>

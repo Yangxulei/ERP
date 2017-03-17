@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-3-8 16:55:02 by Hibernate Tools 4.3.5.Final -->
+<hibernate-mapping>
+    <class name="com.iss.db.bean.Employeepaymentview" table="employeepaymentview" catalog="isshrpooling" optimistic-lock="version">
+        <composite-id name="id" class="com.iss.db.bean.EmployeepaymentviewId">
+            <key-property name="empid" type="string">
+                <column name="empid" length="45" />
+            </key-property>
+            <key-property name="nameCn" type="string">
+                <column name="nameCn" length="45" />
+            </key-property>
+            <key-property name="sex" type="string">
+                <column name="sex" length="1" />
+            </key-property>
+            <key-property name="deptId" type="long">
+                <column name="deptId" />
+            </key-property>
+            <key-property name="deptName" type="string">
+                <column name="deptName" length="45" />
+            </key-property>
+            <key-property name="jobId" type="long">
+                <column name="jobId" />
+            </key-property>
+            <key-property name="jobTitle" type="string">
+                <column name="jobTitle" length="45" />
+            </key-property>
+            <key-property name="empno" type="string">
+                <column name="empno" length="45" />
+            </key-property>
+            <key-property name="id" type="string">
+                <column name="id" length="45" />
+            </key-property>
+            <key-property name="base" type="big_decimal">
+                <column name="base" precision="8" />
+            </key-property>
+            <key-property name="job" type="big_decimal">
+                <column name="job" precision="8" />
+            </key-property>
+            <key-property name="traffic" type="big_decimal">
+                <column name="traffic" precision="8" />
+            </key-property>
+            <key-property name="communicate" type="big_decimal">
+                <column name="communicate" precision="8" />
+            </key-property>
+            <key-property name="trip" type="big_decimal">
+                <column name="trip" precision="8" />
+            </key-property>
+            <key-property name="endowment" type="big_decimal">
+                <column name="endowment" precision="8" />
+            </key-property>
+            <key-property name="medical" type="big_decimal">
+                <column name="medical" precision="8" />
+            </key-property>
+            <key-property name="unemployment" type="big_decimal">
+                <column name="unemployment" precision="8" />
+            </key-property>
+            <key-property name="pafhc" type="big_decimal">
+                <column name="pafhc" precision="8" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

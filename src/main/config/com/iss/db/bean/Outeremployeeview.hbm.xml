@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-3-8 16:55:02 by Hibernate Tools 4.3.5.Final -->
+<hibernate-mapping>
+    <class name="com.iss.db.bean.Outeremployeeview" table="outeremployeeview" catalog="isshrpooling" optimistic-lock="version">
+        <composite-id name="id" class="com.iss.db.bean.OuteremployeeviewId">
+            <key-property name="id" type="string">
+                <column name="id" length="45" />
+            </key-property>
+            <key-property name="empNo" type="string">
+                <column name="empNo" length="45" />
+            </key-property>
+            <key-property name="nameCn" type="string">
+                <column name="nameCN" length="45" />
+            </key-property>
+            <key-property name="sex" type="string">
+                <column name="sex" length="1" />
+            </key-property>
+            <key-property name="birth" type="string">
+                <column name="birth" length="10" />
+            </key-property>
+            <key-property name="personId" type="string">
+                <column name="personID" length="45" />
+            </key-property>
+            <key-property name="tel" type="string">
+                <column name="tel" length="45" />
+            </key-property>
+            <key-property name="qq" type="string">
+                <column name="qq" length="45" />
+            </key-property>
+            <key-property name="email" type="string">
+                <column name="email" length="100" />
+            </key-property>
+            <key-property name="country" type="string">
+                <column name="country" length="45" />
+            </key-property>
+            <key-property name="state" type="int">
+                <column name="state" />
+            </key-property>
+            <key-property name="deptId" type="long">
+                <column name="deptId" />
+            </key-property>
+            <key-property name="jobId" type="long">
+                <column name="jobId" />
+            </key-property>
+            <key-property name="oid" type="string">
+                <column name="oid" length="45" />
+            </key-property>
+            <key-property name="sendCor" type="string">
+                <column name="sendCor" />
+            </key-property>
+            <key-property name="sendBegin" type="string">
+                <column name="sendBegin" length="10" />
+            </key-property>
+            <key-property name="sendContract" type="string">
+                <column name="sendContract" />
+            </key-property>
+            <key-property name="cycle" type="big_decimal">
+                <column name="cycle" precision="8" scale="1" />
+            </key-property>
+            <key-property name="subsidy" type="binary">
+                <column name="subsidy" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

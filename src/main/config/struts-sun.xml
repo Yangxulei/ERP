@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+
+	<package name="BaseInfoSysUserValue" namespace="/base" extends="json-default">
+		<action name="addSysUser" class="com.iss.action.baseInfo.SysUserManageAction"
+			method="saveUserValue">
+			<result name="success" type="json">
+                            <param name="root">message</param>
+                   </result>
+		</action>
+	</package>
+<package name="baseInfo" namespace="/base" extends="json-default">
+<action name="buildSysuserTree" class="sysuserAction" method="buildSysuserTree">
+<result name="success" type="json">
+<param name="root">sysusers</param>
+</result>
+</action></package>
+<package name="studentEmployee" namespace="/Employee" extends="json-default">
+<action name="searchStudentEmployee" class="studentEmpAction" method="searchEmployee">
+<result name="success" type="json">
+<param name="root">emps</param>
+</result>
+</action>
+</package>
+</struts>

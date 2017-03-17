@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jdbc="http://www.springframework.org/schema/jdbc" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc-4.3.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
+    <!-- DAO层定义 -->
+	<bean id="deptDao" class="com.iss.db.dao.impl.DepartmentDAOImpl"></bean>
+	<bean id="normalEmpViewDao" class="com.iss.db.dao.impl.NormalEmpViewDAOImpl"></bean>
+
+	<!-- Service定义 -->
+	<bean id="deptService" class="com.iss.service.impl.DepartmentServiceImpl"></bean>
+	<bean id="normalEmpViewService" class="com.iss.service.impl.NormalEmpViewServiceImpl"></bean>
+
+	<!-- Action定义 -->
+	<bean id="deptAction" class="com.iss.action.base.DepartmentAction"></bean>
+	 <bean id="normalEmpAction" class="com.iss.action.employee.NormalEmployeeAction"></bean>
+</beans>

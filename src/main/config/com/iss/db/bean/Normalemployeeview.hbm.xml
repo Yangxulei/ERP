@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-3-8 16:55:02 by Hibernate Tools 4.3.5.Final -->
+<hibernate-mapping>
+    <class name="com.iss.db.bean.Normalemployeeview" table="normalemployeeview" catalog="isshrpooling" optimistic-lock="version">
+        <composite-id name="id" class="com.iss.db.bean.NormalemployeeviewId">
+            <key-property name="id" type="string">
+                <column name="id" length="45" />
+            </key-property>
+            <key-property name="empNo" type="string">
+                <column name="empNo" length="45" />
+            </key-property>
+            <key-property name="nameCn" type="string">
+                <column name="nameCN" length="45" />
+            </key-property>
+            <key-property name="sex" type="string">
+                <column name="sex" length="1" />
+            </key-property>
+            <key-property name="birth" type="string">
+                <column name="birth" length="10" />
+            </key-property>
+            <key-property name="personId" type="string">
+                <column name="personID" length="45" />
+            </key-property>
+            <key-property name="tel" type="string">
+                <column name="tel" length="45" />
+            </key-property>
+            <key-property name="qq" type="string">
+                <column name="qq" length="45" />
+            </key-property>
+            <key-property name="email" type="string">
+                <column name="email" length="100" />
+            </key-property>
+            <key-property name="country" type="string">
+                <column name="country" length="45" />
+            </key-property>
+            <key-property name="state" type="int">
+                <column name="state" />
+            </key-property>
+            <key-property name="deptId" type="long">
+                <column name="deptId" />
+            </key-property>
+            <key-property name="jobId" type="long">
+                <column name="jobId" />
+            </key-property>
+            <key-property name="nid" type="string">
+                <column name="nid" length="45" />
+            </key-property>
+            <key-property name="joinDate" type="date">
+                <column name="joinDate" length="10" />
+            </key-property>
+            <key-property name="eduHistory" type="string">
+                <column name="eduHistory" length="45" />
+            </key-property>
+            <key-property name="bank" type="string">
+                <column name="bank" length="45" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

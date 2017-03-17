@@ -1,0 +1,114 @@
+[
+    {
+        "id": 6,
+        "text": "软通动力集团",
+        "parentID": null,
+        "deptParent": null,
+        "desc": null,
+        "enable": 1,
+        "children": [
+            {
+                "id": 1,
+                "text": "天津事业部",
+                "parentID": 6,
+                "deptParent": "软通动力集团",
+                "desc": null,
+                "enable": 1,
+                "children": [
+                    {
+                        "id": 9,
+                        "text": "开发事业2部",
+                        "parentID": 1,
+                        "deptParent": "天津事业部",
+                        "desc": null,
+                        "enable": 1
+                    },
+                    {
+                        "id": 8,
+                        "text": "开发事业1部",
+                        "parentID": 1,
+                        "deptParent": "天津事业部",
+                        "desc": null,
+                        "enable": 1
+                    }
+                ]
+            },
+            {
+                "id": 2,
+                "text": "北京事业部",
+                "parentID": 6,
+                "deptParent": "软通动力集团",
+                "desc": null,
+                "enable": 1,
+                "children": [
+                    {
+                        "id": 10,
+                        "text": "开发事业3部",
+                        "parentID": 2,
+                        "deptParent": "北京事业部",
+                        "desc": null,
+                        "enable": 1
+                    },
+                    {
+                        "id": 11,
+                        "text": "开发事业4部",
+                        "parentID": 2,
+                        "deptParent": "北京事业部",
+                        "desc": null,
+                        "enable": 1
+                    }
+                ]
+            },
+            {
+                "id": 3,
+                "text": "金融事业部",
+                "parentID": 6,
+                "deptParent": "软通动力集团",
+                "desc": null,
+                "enable": 1,
+                "children": [
+                    {
+                        "id": 12,
+                        "text": "金融服务部",
+                        "parentID": 3,
+                        "deptParent": "金融事业部",
+                        "desc": null,
+                        "enable": 1
+                    },
+                    {
+                        "id": 13,
+                        "text": "金融创新部",
+                        "parentID": 3,
+                        "deptParent": "金融事业部",
+                        "desc": null,
+                        "enable": 1
+                    }
+                ]
+            },
+            {
+                "id": 4,
+                "text": "外包事业部",
+                "parentID": 6,
+                "deptParent": "软通动力集团",
+                "desc": null,
+                "enable": 1
+            },
+            {
+                "id": 5,
+                "text": "财务部",
+                "parentID": 6,
+                "deptParent": "软通动力集团",
+                "desc": null,
+                "enable": 1
+            },
+            {
+                "id": 7,
+                "text": "人力资源办公室",
+                "parentID": 6,
+                "deptParent": "软通动力集团",
+                "desc": null,
+                "enable": 1
+            }
+        ]
+    }
+]

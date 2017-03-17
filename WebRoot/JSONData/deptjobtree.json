@@ -1,0 +1,117 @@
+[
+
+	{
+		"id" : 13,
+		"text" : "总经理",
+		"reportTo" : null,
+		"jobParent" : null,
+		"desc" : null,
+		"enable" : 1,
+		"children":[
+					{
+						"id" : 2,
+						"text" : "部门总监",
+						"reportTo" : 13,
+						"jobParent" : "总经理",
+						"desc" : null,
+						"enable" : 1,
+						"children":[
+					{
+								"id" : 1,
+								"text" : "职员",
+								"reportTo" : 2,
+								"jobParent" : "部门总监",
+								"desc" : null,
+								"enable" : 1
+					},
+					{
+					"id" : 11,
+					"text" : "项目经理",
+					"reportTo" : 2,
+					"jobParent" : "部门总监",
+					"desc" : null,
+					"enable" : 1,
+					"children":[
+								{
+								"id" : 3,
+								"text" : "项目助理",
+								"reportTo" : 11,
+								"jobParent" : "项目经理",
+								"desc" : null,
+								"enable" : 1
+							},
+							{
+								"id" : 4,
+								"text" : "开发工程师",
+								"reportTo" : 11,
+								"jobParent" : "项目经理",
+								"desc" : null,
+								"enable" : 1,
+								"children":[
+								{
+									"id" : 5,
+									"text" : "助理开发工程师",
+									"reportTo" : 4,
+									"jobParent" : "开发工程师",
+									"desc" : null,
+									"enable" : 1
+								},
+								{
+									"id" : 6,
+									"text" : "实习生",
+									"reportTo" : 4,
+									"jobParent" : "开发工程师",
+									"desc" : null,
+									"enable" : 1
+								}
+								]
+							},
+							{
+								"id" : 7,
+								"text" : "高级开发工程师",
+								"reportTo" : 11,
+								"jobParent" : "项目经理",
+								"desc" : null,
+								"enable" : 1
+							},
+							{
+								"id" : 8,
+								"text" : "架构师",
+								"reportTo" : 11,
+								"jobParent" : "项目经理",
+								"desc" : null,
+								"enable" : 1
+							}
+					   ]
+				},
+				{
+					"id" : 10,
+					"text" : "测试经理",
+					"reportTo" : 2,
+					"jobParent" : "部门总监",
+					"desc" : null,
+					"enable" : 1,
+					"children":[
+					{
+						"id" : 9,
+						"text" : "测试工程师",
+						"reportTo" : 10,
+						"jobParent" : "测试经理",
+						"desc" : null,
+						"enable" : 1
+					}
+					]
+				},
+				{
+					"id" : 12,
+					"text" : "部门助理",
+					"reportTo" : 2,
+					"jobParent" : "部门总监",
+					"desc" : null,
+					"enable" : 1
+				}	
+			]
+		}	
+	]
+  }
+]

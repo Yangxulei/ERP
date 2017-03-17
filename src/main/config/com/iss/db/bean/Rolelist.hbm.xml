@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-3-8 16:55:02 by Hibernate Tools 4.3.5.Final -->
+<hibernate-mapping>
+    <class name="com.iss.db.bean.Rolelist" table="rolelist" catalog="isshrpooling" optimistic-lock="version">
+        <id name="role" type="string">
+            <column name="role" length="45" />
+            <generator class="assigned" />
+        </id>
+    </class>
+</hibernate-mapping>

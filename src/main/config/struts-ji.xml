@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+	
+	<struts>
+
+    <package name="BaseInfoDictValue" namespace="/base" extends="json-default">
+         <action name="addDictValue" class="com.iss.action.baseInfo.DictManageAction" method="saveDictValue">
+                   <result name="success" type="json">
+                            <param name="root">message</param>
+                   </result>
+         </action>
+    </package>
+    
+    <package name="Common" namespace="/commons" extends="json-default">
+         <action name="picUpload" class="com.iss.action.commons.FileUploadAction" method="fileUpload">
+                   <result name="success" type="json" >
+                            <param name="root">message</param>
+                   </result>
+         </action>
+    </package>
+    
+    <package name="baseInfo" namespace="/base" extends="json-default">
+		<action name="buildDeptTree" class="deptAction" method="buildDeptTree">
+			<result name="success" type="json" >
+				<param name="root">depts</param>
+			</result>
+		</action>
+		<action name="saveDept" class="deptAction" method="saveDept">
+			<result name="success" type="json" >
+				<param name="root">msg</param>
+			</result>
+		</action>
+	</package>
+	 <package name="jobinfo" namespace="/base" extends="json-default">
+	     <action name="buildJobTree" class="jobAction" method="buildJobTree">
+	         <result name="success" type="json">
+	             <param name="root">jobs</param>
+	         </result>
+	     </action>
+	 </package>
+	<package name="normalEmployee" namespace="/employee" extends="json-default">
+		<action name="searchNormalEmployee" class="normalEmpAction" method="searchEmployee">
+			<result name="success" type="json" >
+				<param name="root">emps</param>
+			</result>
+		</action>
+	</package>
+	
+	</struts>
+	

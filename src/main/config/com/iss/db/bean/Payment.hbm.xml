@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-3-8 16:55:02 by Hibernate Tools 4.3.5.Final -->
+<hibernate-mapping>
+    <class name="com.iss.db.bean.Payment" table="payment" catalog="isshrpooling" optimistic-lock="version">
+        <id name="id" type="string">
+            <column name="id" length="45" />
+            <generator class="assigned" />
+        </id>
+        <property name="empId" type="string">
+            <column name="empID" length="45" not-null="true" />
+        </property>
+        <property name="base" type="big_decimal">
+            <column name="base" precision="8">
+                <comment>&#187;&#249;&#177;&#190;&#185;&#164;&#215;&#202;</comment>
+            </column>
+        </property>
+        <property name="job" type="big_decimal">
+            <column name="job" precision="8">
+                <comment>&#214;&#176;&#206;&#187;&#185;&#164;&#215;&#202;</comment>
+            </column>
+        </property>
+        <property name="traffic" type="big_decimal">
+            <column name="traffic" precision="8">
+                <comment>&#189;&#187;&#205;&#168;&#178;&#185;&#214;&#250;</comment>
+            </column>
+        </property>
+        <property name="communicate" type="big_decimal">
+            <column name="communicate" precision="8">
+                <comment>&#205;&#168;&#208;&#197;&#178;&#185;&#214;&#250;</comment>
+            </column>
+        </property>
+        <property name="trip" type="big_decimal">
+            <column name="trip" precision="8">
+                <comment>&#194;&#195;&#208;&#208;&#178;&#185;&#214;&#250;</comment>
+            </column>
+        </property>
+        <property name="endowment" type="big_decimal">
+            <column name="endowment" precision="8">
+                <comment>&#209;&#248;&#192;&#207;&#177;&#163;&#207;&#213;&#187;&#249;&#202;&#253;</comment>
+            </column>
+        </property>
+        <property name="medical" type="big_decimal">
+            <column name="medical" precision="8">
+                <comment>&#210;&#189;&#193;&#198;&#177;&#163;&#207;&#213;</comment>
+            </column>
+        </property>
+        <property name="unemployment" type="big_decimal">
+            <column name="unemployment" precision="8">
+                <comment>&#202;&#167;&#210;&#181;&#177;&#163;&#207;&#213;</comment>
+            </column>
+        </property>
+        <property name="pafhc" type="big_decimal">
+            <column name="pafhc" precision="8">
+                <comment>&#215;&#161;&#183;&#191;&#185;&#171;&#187;&#253;&#189;&#240; public accumulation fund for housing construction</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

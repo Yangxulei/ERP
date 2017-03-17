@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-3-8 16:55:02 by Hibernate Tools 4.3.5.Final -->
+<hibernate-mapping>
+    <class name="com.iss.db.bean.Jobview" table="jobview" catalog="isshrpooling" optimistic-lock="version">
+        <composite-id name="id" class="com.iss.db.bean.JobviewId">
+            <key-property name="id" type="int">
+                <column name="id" />
+            </key-property>
+            <key-property name="jobTitle" type="string">
+                <column name="jobTitle" length="45" />
+            </key-property>
+            <key-property name="reportTo" type="java.lang.Integer">
+                <column name="reportTo" />
+            </key-property>
+            <key-property name="jobParent" type="string">
+                <column name="jobParent" length="45" />
+            </key-property>
+            <key-property name="desc" type="string">
+                <column name="desc" />
+            </key-property>
+            <key-property name="enable" type="java.lang.Byte">
+                <column name="enable" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

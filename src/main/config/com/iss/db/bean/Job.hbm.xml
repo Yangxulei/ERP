@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-3-8 16:55:02 by Hibernate Tools 4.3.5.Final -->
+<hibernate-mapping>
+    <class name="com.iss.db.bean.Job" table="job" catalog="isshrpooling" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="jobTitle" type="string">
+            <column name="jobTitle" length="45" not-null="true" />
+        </property>
+        <property name="reportTo" type="java.lang.Integer">
+            <column name="reportTo" />
+        </property>
+        <property name="desc" type="string">
+            <column name="desc" />
+        </property>
+        <property name="enable" type="java.lang.Byte">
+            <column name="enable" />
+        </property>
+        <set name="children" inverse="true" lazy="false">
+            <key column="reportTo" />
+            <one-to-many class="com.iss.db.bean.Job" />
+        </set>
+    </class>
+</hibernate-mapping>
